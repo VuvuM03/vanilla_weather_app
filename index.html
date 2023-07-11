@@ -14,8 +14,32 @@
   </head>
   <body>
     <div class="container">
-      <h1><em>Weather App</em></h1>
-      <a href="" class="btn btn-primary"> Click me</a>
+      <div class="weather-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3 mt-4">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  id="search_input"
+                  class="form-control"
+                  placeholder="Enter a city..."
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  id="submit-btn"
+                  class="btn btn-primary w-90"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+          <h1><em>East London</em></h1>
+        </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
