@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-wrapper">
+      <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3 mt-4">
             <div class="row">
               <div class="col-9">
                 <input
                   type="search"
-                  id="search_input"
+                  id="search-input"
                   class="form-control"
                   placeholder="Enter a city..."
                   autocomplete="off"
@@ -31,16 +32,104 @@
                 <input
                   type="submit"
                   id="submit-btn"
-                  class="btn btn-primary w-90"
+                  class="btn btn-primary w-100"
                   value="Search"
                 />
               </div>
             </div>
           </form>
-          <h1><em>East London</em></h1>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img alt="clear sky" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong>
+                  <span class="units">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"> </span> %</li>
+                <li>Wind: <span id="wind"> </span>km/h</li>
+              </ul>
+            </div>
+            <div class="weather-forecast" id="forecast">
+              <div class="row">
+                <div class="col-3">
+                  <div class="bg-white rounded p-2 m-2 text-center">
+                    <div c;lass="forecast-date">Mon</div>
+                    <img
+                      src="https://openweathermap.org/img/wn/03d@2x.png"
+                      width="40"
+                    />
+                    <div class="forecast-temperature">
+                      <span class="min-temperature"> </span>
+                      <span class="max-temperature"> </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="bg-white rounded p-2 m-2 text-center">
+                    <div c;lass="forecast-date">Tue</div>
+                    <img
+                      src="https://openweathermap.org/img/wn/03d@2x.png"
+                      width="40"
+                    />
+                    <div class="forecast-temperature">
+                      <span class="min-temperature"> </span>
+                      <span class="max-temperature"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="bg-white rounded p-2 m-2 text-center">
+                    <div c;lass="forecast-date">Wed</div>
+                    <img
+                      src="https://openweathermap.org/img/wn/03d@2x.png"
+                      width="40"
+                    />
+                    <div class="forecast-temperature">
+                      <span class="min-temperature"> </span>
+                      <span class="max-temperature"> </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="bg-white rounded p-2 m-2 text-center">
+                    <div c;lass="forecast-date">Thur</div>
+                    <img
+                      src="https://openweathermap.org/img/wn/03d@2x.png"
+                      width="40"
+                    />
+                    <div class="forecast-temperature">
+                      <span class="min-temperature"></span>
+                      <span class="max-temperature"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <small>
+          <a href="https://github.com/VuvuM03/weather_page" target="_blank"
+            >Open source code</a
+          >
+          by Vuyolwethu Mahanjana
+        </small>
       </div>
+      <script src="src/app.js"></script>
     </div>
-    <script src="src/app.js"></script>
   </body>
 </html>
