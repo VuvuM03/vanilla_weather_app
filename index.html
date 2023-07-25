@@ -19,7 +19,7 @@
         <div class="weather-app">
           <form id="search-form" class="mb-3 mt-4">
             <div class="row">
-              <div class="col-9">
+              <div class="col-10">
                 <input
                   type="search"
                   id="search-input"
@@ -28,12 +28,12 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-2">
                 <input
                   type="submit"
                   id="submit-btn"
-                  class="btn btn-primary w-100"
-                  value="Search"
+                  class="btn btn-info w-100"
+                  value="🔎"
                 />
               </div>
             </div>
@@ -59,69 +59,28 @@
               </div>
             </div>
             <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity"> </span> %</li>
-                <li>Wind: <span id="wind"> </span>km/h</li>
+              <ul class="info-list">
+                <li>Humidity: <span id="humidity"> </span>%</li>
+                <li>Wind:<span id="wind"></span>km/h</li>
               </ul>
+            </div>
             </div>
             <div class="weather-forecast" id="forecast">
               <div class="row">
                 <div class="col-2">
                   <div class="bg-white rounded p-2 m-2 text-center">
-                    <div c;lass="forecast-date">Mon</div>
+                    <div class="forecast-date"></div>
                     <img
                       src="https://openweathermap.org/img/wn/03d@2x.png"
                       width="30"
                     />
-                    <div class="forecast-temperature">
-                      <span class="min-temperature"> </span>
-                      <span class="max-temperature"> </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="bg-white rounded p-2 m-2 text-center">
-                    <div c;lass="forecast-date">Tue</div>
-                    <img
-                      src="https://openweathermap.org/img/wn/03d@2x.png"
-                      width="30"
-                    />
-                    <div class="forecast-temperature">
-                      <span class="min-temperature"> </span>
-                      <span class="max-temperature"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="bg-white rounded p-2 m-2 text-center">
-                    <div c;lass="forecast-date">Wed</div>
-                    <img
-                      src="https://openweathermap.org/img/wn/03d@2x.png"
-                      width="30"
-                    />
-                    <div class="forecast-temperature">
-                      <span class="min-temperature"> </span>
-                      <span class="max-temperature"> </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="bg-white rounded p-2 m-2 text-center">
-                    <div c;lass="forecast-date">Thur</div>
-                    <img
-                      src="https://openweathermap.org/img/wn/03d@2x.png"
-                      width="30"
-                    />
-                    <div class="forecast-temperature">
-                      <span class="min-temperature"></span>
-                      <span class="max-temperature"></span>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <small>
           <a href="https://github.com/VuvuM03/weather_page" target="_blank"
             >Open source code</a

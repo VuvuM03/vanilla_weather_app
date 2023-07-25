@@ -41,7 +41,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-      <div class="col-3">
+      <div class="col-2">
         <div class="forecast-date">${formatDay(forecastDay.dt)}</div>
         <img
           src="http://openweathermap.org/img/wn/${
@@ -52,10 +52,10 @@ function displayForecast(response) {
         />
         <div class="forecast-temperature">
           <span class="min-temperature"> ${Math.round(
-            forecastDay.temp.max
+            forecastDay.temp.min
           )}° </span>
           <span class="max-temperature"> ${Math.round(
-            forecastDay.temp.min
+            forecastDay.temp.max
           )}° </span>
         </div>
       </div>
@@ -68,7 +68,7 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -100,7 +100,7 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
