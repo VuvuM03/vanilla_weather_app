@@ -1,15 +1,13 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: cursive;
   background-image: url(https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
+  text-align: center;
   color: black;
   font-size: 26px;
   font-weight: 100;
@@ -37,6 +35,7 @@ li {
   font-style: italic;
   font-weight: 100;
   line-height: 19px;
+  opacity: 0.7;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -56,14 +55,15 @@ small {
 }
 
 .weather-app-wrapper {
-  max-width: 800px;
+  max-width: 700px;
   margin: 30px auto;
+  margin-bottom: 0;
 }
 .weather-app {
   background-color: lightsteelblue;
   padding: 30px;
   border: 2px solid #dadde1;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 .weather-temperature {
   color: #000;
